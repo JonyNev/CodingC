@@ -13,7 +13,7 @@ int main()
  int sum_dig(int x){
    
  int y=0 ;
- for(;x%10!=0;x/10){ y += x%10;} 
+ for(;x%10!=0;x/=10){ y += x%10;} 
  return y;}
   int rec=-1;
   int   num1=0 ,num2=0;
@@ -26,7 +26,7 @@ int main()
         for(i=(num1+1);i<num2;i++)
         {
            
-            if(sum_dig(i)==8){rec=i;}
+            if(sum_dig(i)==8){rec=i;printf("%d",rec);return 0;}
                   
         }  
                
@@ -36,7 +36,7 @@ int main()
         for(i=(num2+1);i<num1;i++)
         {
                        
-            if(sum_dig(i)==8){rec=i;}
+            if(sum_dig(i)==8){rec=i;printf("%d",rec);return 0;}
         }
                
      }
